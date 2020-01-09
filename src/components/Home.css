@@ -1,69 +1,33 @@
 h1, h4, p{
-    color: orange;
+    color: black;
 }
 
-/* body{
-    background-image: url('./images/voc.jpg') !important;
-    background-position:50% 50% !important;
-	background-size:cover !important;
-} */
 
-
-/* .info-box {
-    top: 5%;
-    bottom: auto;
-    left: 5%;
-    text-align: left;
-    
-    right: auto;
-    padding:5px;
-} */
-
-/* .bird{
-    margin-top: 4%;
-    background-color: black !important;
-    opacity: 0.80 !important;
-    padding: 23px;
-    border-color: 1px solid white !important;
-    
-
-} */
-
-/* .bird p{
-   font-size: 20px;
-   margin-top: 3%;
-
-}
-
-.bb{
-    background-color: green;
-
-}
-
-#sub {
-    top: auto;
-    bottom: 10%;
-    left: 8%;
-    text-align: left;
-    font-size:3rem;
-
-    right: auto;
-    padding:5px;
-
-} */
 #root .container-fluid {
     margin: 0;
     min-height: 100vh;
-    background-color: orange;
+
+
+
+    background-image: url("./images/voc.jpg");
+
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.titless{
+    color: rgb(23, 155, 23);
 }
 
 .card{
     position: absolute;
-    margin-top: 5%; 
-    background-color: gray;
-     margin-left: 5%;
-    margin-right: 60%;
-    padding: 0.5%;
+    margin-top: 11%; 
+    background-color: whitesmoke;
+     margin-left: 7%;
+    margin-right: 50%;
+    padding: 2%;
+    border: 3px solid black;
 }
 
 .container-fluid{
