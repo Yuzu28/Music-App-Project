@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './Home.css';
+import beat from './images/beat.gif' // Tell Webpack this JS file uses this image
+
 // import {Link} from 'react-router-dom';
 
 
@@ -20,7 +22,12 @@ import './Home.css';
                             
                         </div>
                     </div>
+                    <img src={beat} alt="Logo" />
+
+
                 </div>
+
+
             </div>
 
 
