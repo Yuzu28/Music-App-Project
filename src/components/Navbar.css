@@ -1,16 +1,18 @@
 .navbar-light {
 	/* margin-top: 20px; */ 
-	background-color: rgba(255, 255, 255, 0.267);
+    /* background-color: rgba(255, 255, 255, 0.267); */
+    background-color: transparent;
 	background-image: none;
   	background-repeat: no-repeat;
  }
 nav{
-    position: absolute !important;
-    margin-top: 0% !important;
+    /* position: absolute !important; */
+    /* margin-top: 0% !important; */
 }
 
 .nav-link{
-    color: black !important;
+    color: white !important;
+    text-shadow: 2px 2px black;
     font-size: 2em;
     font-weight: bold !important;
 
@@ -25,6 +27,8 @@ nav{
     color: black !important;
     font-size: 2.2em;
     font-weight: bold !important;
+    /* text-shadow: 2px 2px greenyellow; */
+
 
     font-family:"Passion One",sans-serif;
 
