@@ -2,9 +2,24 @@ h1, h4, p{
     color: black;
 }
 
+body{
+    background-color: black;
+
+    /* background-image: url("https://wallpaperaccess.com/full/173782.jpg");
+
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 200vh; */
+
+
+    
+}
 
 #root .container-fluid {
-    margin: 0;
+    margin-top: 0%;
     min-height: 100vh;
 
 
