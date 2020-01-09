@@ -14,6 +14,8 @@ function App() {
       <Router>
         <Route path="/" component={Navbar}/>
         <Route exact path="/" component={Home}/>
+
+
         <Route  exact path="/music" component={MusicSearch}/>
 
 

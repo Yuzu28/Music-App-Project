@@ -1,0 +1,36 @@
+.navbar-light {
+	/* margin-top: 20px; */ 
+	background-color: rgba(255, 255, 255, 0.267);
+	background-image: none;
+  	background-repeat: no-repeat;
+ }
+nav{
+    position: absolute !important;
+    margin-top: 0% !important;
+}
+
+.nav-link{
+    color: black !important;
+    font-size: 2em;
+    font-weight: bold !important;
+
+    font-family:"Passion One",sans-serif;
+
+}
+
+
+
+
+.navbar-brand{
+    color: black !important;
+    font-size: 2.2em;
+    font-weight: bold !important;
+
+    font-family:"Passion One",sans-serif;
+
+
+    /* margin-left: 15%; */
+}
+/* li{
+    color: blue;
+} */
