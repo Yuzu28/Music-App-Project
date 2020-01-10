@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './MusicSearch.css';
 import axios from 'axios';
+import Artist from './Artist';
 
 
 
@@ -98,6 +99,9 @@ import axios from 'axios';
 
 
 
+               <div>
+                   <Artist artist={this.state.artist} />
+               </div>
             </div>
    
         )
@@ -127,7 +131,5 @@ export default MusicSearch;
 //         }
 
 
-
-      
 
     

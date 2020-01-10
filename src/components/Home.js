@@ -22,7 +22,7 @@ import beat from './images/beat.gif' // Tell Webpack this JS file uses this imag
                             
                         </div>
                     </div>
-                    <img src={beat} alt="Logo" />
+                    <img className="wallpaperxxx" src={beat} alt="Logo" />
 
 
                 </div>
