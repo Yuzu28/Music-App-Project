@@ -9,7 +9,8 @@ import axios from 'axios';
     state ={
 
         artistQuery: '',
-        artist: null
+        artist: null,
+        track: []
     }
 
 
@@ -51,14 +52,26 @@ import axios from 'axios';
 
 
                 axios.get(api_call_top_tracks ).then((response)=>{
-                    console.log(response.data);})
+
+                    const trackData = response.data;
+                    // console.log(trackData);
+
+                    this.setState(
+                        {track: 
+                        trackData 
+                    
+                    });
+
+
+                   
+                })
 
                     
 
                 
 
             }
-       
+
     })
 }
 
@@ -66,6 +79,8 @@ import axios from 'axios';
     
 
     render(){
+        // console.log('this.state', this.state);
+
         return(
             <div className="music-container">
                 <h1 className="musicSearch"> Music Search</h1>
