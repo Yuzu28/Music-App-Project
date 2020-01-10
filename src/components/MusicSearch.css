@@ -3,3 +3,29 @@ body {
     height: 100%;
     background-color: white;
 }
+
+.musicSearch{
+    color: white !important;
+}
+
+.navbar-form{
+	width: 50%;
+	margin: 0 auto;
+}
+
+
+.music-container{
+    margin-top: 7%;
+}
+
+.btn-secondary{
+	background-color: #7300e6;
+}
+
+.form-control:focus {
+	border: 2px solid  #7300e6;
+	/* box-shadow: #7300e6 ; */
+	box-shadow: none;
+
+
+  }
