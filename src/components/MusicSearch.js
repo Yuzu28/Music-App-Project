@@ -11,7 +11,9 @@ import Artist from './Artist';
 
         artistQuery: '',
         artist: null,
-        track: []
+        track: [],
+        msg: "",
+        img:"",
     }
 
 
@@ -42,10 +44,31 @@ import Artist from './Artist';
             console.log(response.data);
             console.log(response.data.artists.total);
 
-            if (response.data.artists.total > 0){
+            if (response.data.artists.total === 0){
+
+                this.setState({
+                    artistQuery: '',
+                    artist: null,
+                    track: [],
+                    msg: "No Results Found",
+                    img:  <img id= "noResultImg" src={process.env.PUBLIC_URL + '/no.jpg'} height="45%" width="50%" alt="gameImage" />
+                })
+            }
+
+
+
+            
+
+            else{
                 const artist = response.data.artists.items[0];
 
-                this.setState({artist})
+                this.setState({
+                    artist,
+                    msg:"",
+                    img:""
+
+                
+                })
 
                 //geting the top track for the users after passing the if statment. 
                 const api_call_top_tracks = `https://spotify-api-wrapper.appspot.com/artist/${artist.id}/top-tracks`;
@@ -80,7 +103,8 @@ import Artist from './Artist';
     
 
     render(){
-        // console.log('this.state', this.state);
+        console.log('this.state', this.state);
+
 
         return(
             <div className="music-container">
@@ -100,11 +124,15 @@ import Artist from './Artist';
 
 
                <div>
+                    <h1 className="noResults">{this.state.msg}</h1>
+                    {this.state.img}
                    <Artist artist={this.state.artist} />
                </div>
             </div>
+
    
         )
+       
     }
 }
 
