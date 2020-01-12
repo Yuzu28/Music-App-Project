@@ -24,12 +24,6 @@ const Artist = ({artist}) => {
                     <img className="artistRes"  src={process.env.PUBLIC_URL + '/noimage.jpg'} height="60%" width="90%" alt="img"   />
              }
 
-
-
-
-
-
-            {/* <img className="artistRes" src={images[0].url} alt='artist profile picture' height="200" width="200" /> */}
         </div>
     )
 
