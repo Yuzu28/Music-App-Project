@@ -27,10 +27,10 @@ class NavBar extends Component{
           <a className="nav-link" href="/music">Music</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Lyrics</a>
+          <a className="nav-link" href="#">Videos</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Videos</a>
+          <a className="nav-link" href="#">Comments</a>
         </li>
       </ul>
     </div>

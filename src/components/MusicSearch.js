@@ -84,39 +84,89 @@ import Artist from './Artist';
             console.log(response.data);
             console.log(response.data.artists.total);
 
+            //fix problem when user first hit the no result page
             if (response.data.artists.total === 0){
 
+                if (!this.state.audio) {
+                    this.setState({
+                        msg: "No Results Found",
+                        img:  <img id= "noResultImg" src={process.env.PUBLIC_URL + '/no.jpg'} height="45%" width="50%" alt="gameImage" />,
+                    })
+                }
+
+                else{
+
+                //stop audio from playing on the no result page !!!
+                this.state.audio.pause();
+
+                
                 this.setState({
 
                     artistQuery: '',
                     artist: null,
-                    track: [],
+                    tracks: [],
                     msg: "No Results Found",
-                    img:  <img id= "noResultImg" src={process.env.PUBLIC_URL + '/no.jpg'} height="45%" width="50%" alt="gameImage" />
+                    img:  <img id= "noResultImg" src={process.env.PUBLIC_URL + '/no.jpg'} height="45%" width="50%" alt="gameImage" />,
+                    playing: false,
+                    audio: null,
+                    PlayingAudioPreview: null,
                 })
-                
 
+            }
             }
 
 
 
-            
-
+           
             else{
-                const artist = response.data.artists.items[0];
+                //this runs when there is no audio playing when searching for a new artist
 
+                if (!this.state.audio) {
+                
+                        const artist = response.data.artists.items[0];
+                        
+                        this.setState({
+                            artist,
+                            msg:"",
+                            img:"",
+                        })
+                        //geting the top track for the users after passing the if statment. 
+                        const api_call_top_tracks = `https://spotify-api-wrapper.appspot.com/artist/${artist.id}/top-tracks`;
+                        // console.log(api_call_top_tracks);
+        
+                        axios.get(api_call_top_tracks ).then((response)=>{
+        
+                            const trackData = response.data;
+                            // console.log(trackData);
+        
+                            this.setState(
+                                {tracks: 
+                                trackData.tracks
+                            
+                            });
+        
+                        })
+        
+                    }
+
+              
+                
+                else{
+                
+                //this stop the current audio that is playing, when searching for a new artist...
+
+                this.state.audio.pause();
+
+                const artist = response.data.artists.items[0];
+                
                 this.setState({
                     artist,
                     msg:"",
                     img:"",
-
-                
                 })
-
                 //geting the top track for the users after passing the if statment. 
                 const api_call_top_tracks = `https://spotify-api-wrapper.appspot.com/artist/${artist.id}/top-tracks`;
                 // console.log(api_call_top_tracks);
-
 
                 axios.get(api_call_top_tracks ).then((response)=>{
 
@@ -129,15 +179,10 @@ import Artist from './Artist';
                     
                     });
 
-
-                   
                 })
 
-                    
-
-                
-
             }
+        }
 
     })
 }
@@ -151,6 +196,8 @@ import Artist from './Artist';
         //getting the tracks from the state component and rendering it 
         //audio play the audio from the tracks
         // ********************************
+
+        
         const tList = this.state.tracks.map((ttt,index)=>{
             return(
                     
@@ -162,8 +209,6 @@ import Artist from './Artist';
                     
                     </div>
                    
-
-                    
 
             )
         })
