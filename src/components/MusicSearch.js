@@ -21,6 +21,11 @@ import Artist from './Artist';
     }
 
 
+    
+
+  
+
+
     //below fires the moment when the value of the element is changed when you type something in the search bar
     updateArtistQuery = (path) =>{
         // console.log('path.target.value', path.target.value);
@@ -59,6 +64,8 @@ import Artist from './Artist';
         }
 
     }
+
+   
 
     searchArtist = (e) =>{
         e.preventDefault();
@@ -146,12 +153,15 @@ import Artist from './Artist';
         // ********************************
         const tList = this.state.tracks.map((ttt,index)=>{
             return(
-                <div className="col-md-4 "  key={index} onClick={this.playAudio(ttt.preview_url)}>
-
-                    <img src={ttt.album.images[0].url} alt="tracks_img" />
-                        <p>{ttt.name}</p>                       
+                    
                 
-                </div>
+                    <div className="col-sm trackStyling" key={index}  onClick={this.playAudio(ttt.preview_url)}>
+
+                        <img src={ttt.album.images[0].url} alt="tracks_img" className="trackImage" />
+                            <p className="trackTitle">{ttt.name}</p>                       
+                    
+                    </div>
+                   
 
                     
 
@@ -165,7 +175,7 @@ import Artist from './Artist';
 
                 <form  onSubmit={this.searchArtist} className="navbar-form" role="search">
                         <div className="input-group">
-                            <input onChange={this.updateArtistQuery}  type="text" className="form-control" placeholder="Search for an Artist..." />
+                            <input onChange={this.updateArtistQuery}  type="text" className="form-control" placeholder="Search for an Artist.....(Ex: HoneyWorks)" />
                                 <div className="input-group-append">
                                     <button onClick={this.searchArtist}  className="btn btn-secondary" type="button">
                                         <i className="fa fa-search"></i>
@@ -176,14 +186,21 @@ import Artist from './Artist';
 
 
 
-               <div>
-                    <h1 className="noResults">{this.state.msg}</h1>
-                    {this.state.img}
-                   <Artist artist={this.state.artist} />
-                   {tList}
-                   {/* <Tracks tracks = {this.state.tracks} /> */}
-               </div>
-            </div>
+
+
+              
+
+                        <div>
+                                <h1 className="noResults">{this.state.msg}</h1>
+                                {this.state.img}
+                            <Artist artist={this.state.artist} />
+                            {tList}
+                            {/* <Tracks tracks = {this.state.tracks} /> */}
+                        </div>
+                </div>
+
+
+           
 
    
         )
