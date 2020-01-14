@@ -76,3 +76,26 @@ body {
     border: 2px solid white;
     margin-bottom: 20%;
 }
+
+.trackTitle{
+    color: white;
+}
+
+.trackStyling{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    margin: 40px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.trackImage{
+    width: 250px;
+    height: 250px;
+    
+}
+
+.trackImage:hover{
+    border: 4px solid greenyellow;
+}
