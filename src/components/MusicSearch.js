@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './MusicSearch.css';
 import axios from 'axios';
 import Artist from './Artist';
+// import Tracks from './Tracks';
 
 
 
@@ -11,9 +12,12 @@ import Artist from './Artist';
 
         artistQuery: '',
         artist: null,
-        track: [],
+        tracks: [],
         msg: "",
         img:"",
+        playing: false,
+        audio: null,
+        PlayingAudioPreview: null,
     }
 
 
@@ -25,6 +29,35 @@ import Artist from './Artist';
 
         // setting the state when searching an artist
         this.setState({ artistQuery: path.target.value });
+    }
+
+
+
+    playAudio = previewUrl => () => {
+        const audio = new Audio (previewUrl);
+
+        if (!this.state.playing){
+            audio.play();
+            this.setState(
+                {playing: true, 
+                    audio,
+                    PlayingAudioPreview: previewUrl,
+                })
+        }
+        else{
+            this.state.audio.pause();
+
+            if (this.state.PlayingAudioPreview === previewUrl){
+                this.setState({playing: false});
+
+
+            }else {
+                audio.play();
+                this.setState({audio, PlayingAudioPreview: previewUrl})
+            }
+
+        }
+
     }
 
     searchArtist = (e) =>{
@@ -47,12 +80,15 @@ import Artist from './Artist';
             if (response.data.artists.total === 0){
 
                 this.setState({
+
                     artistQuery: '',
                     artist: null,
                     track: [],
                     msg: "No Results Found",
                     img:  <img id= "noResultImg" src={process.env.PUBLIC_URL + '/no.jpg'} height="45%" width="50%" alt="gameImage" />
                 })
+                
+
             }
 
 
@@ -65,7 +101,7 @@ import Artist from './Artist';
                 this.setState({
                     artist,
                     msg:"",
-                    img:""
+                    img:"",
 
                 
                 })
@@ -81,8 +117,8 @@ import Artist from './Artist';
                     // console.log(trackData);
 
                     this.setState(
-                        {track: 
-                        trackData 
+                        {tracks: 
+                        trackData.tracks
                     
                     });
 
@@ -104,6 +140,23 @@ import Artist from './Artist';
 
     render(){
         console.log('this.state', this.state);
+        // ********************************
+        //getting the tracks from the state component and rendering it 
+        //audio play the audio from the tracks
+        // ********************************
+        const tList = this.state.tracks.map((ttt,index)=>{
+            return(
+                <div className="col-md-4 "  key={index} onClick={this.playAudio(ttt.preview_url)}>
+
+                    <img src={ttt.album.images[0].url} alt="tracks_img" />
+                        <p>{ttt.name}</p>                       
+                
+                </div>
+
+                    
+
+            )
+        })
 
 
         return(
@@ -127,6 +180,8 @@ import Artist from './Artist';
                     <h1 className="noResults">{this.state.msg}</h1>
                     {this.state.img}
                    <Artist artist={this.state.artist} />
+                   {tList}
+                   {/* <Tracks tracks = {this.state.tracks} /> */}
                </div>
             </div>
 
