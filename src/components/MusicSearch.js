@@ -187,6 +187,25 @@ import Artist from './Artist';
     })
 }
 
+// alert("Hello! I am an alert box!");
+    trackButton = (track) =>{
+
+
+        // console.log(track);
+
+        if (!track.preview_url){
+            return <span className="iconss">N/A</span>
+        }
+
+        if (
+            this.state.playing &&
+            this.state.PlayingAudioPreview === track.preview_url
+        ){
+            return <span className="icons">| |</span>;
+        }
+        return <span className="icons">&#9654;</span>;
+    }
+
   
     
 
@@ -199,13 +218,19 @@ import Artist from './Artist';
 
         
         const tList = this.state.tracks.map((ttt,index)=>{
+
+
+            const { preview_url} =ttt; //to be used for the pause and play audio button <------ took me forever XD
+            // console.log(ttt);
+                        
             return(
                     
                 
                     <div className="col-sm trackStyling" key={index}  onClick={this.playAudio(ttt.preview_url)}>
 
                         <img src={ttt.album.images[0].url} alt="tracks_img" className="trackImage" />
-                            <p className="trackTitle">{ttt.name}</p>                       
+                            <p className="trackTitle">{ttt.name}</p> 
+                            <p className="trackButton">{this.trackButton(ttt)}</p>                      
                     
                     </div>
                    

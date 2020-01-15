@@ -39,6 +39,8 @@ body {
        margin-top: 4% !important;
        margin-left:  auto;
        margin-right:  auto;
+       
+
 
 
      
@@ -99,3 +101,50 @@ body {
 .trackImage:hover{
     border: 4px solid greenyellow;
 }
+
+.trackTitle{
+    background-color: white;
+    color: black;
+    padding: 5px;
+    width: 250px;
+    border: 1px solid black;
+
+
+
+}
+
+.trackButton{
+    color: white;
+    position: absolute;
+    /* bottom: 0px; */
+    top: 252px;
+    right: 200px;
+    background-color: black;
+    width: 32px;
+    height: 32px;
+    border-radius: 25px;
+    padding: 10px;
+    opacity: 0.8;
+}
+
+.icons{
+    color: greenyellow;
+    position: absolute;
+    bottom: 5px;
+    right: 8px;
+}
+
+.iconss{
+    
+    color: greenyellow;
+    position: absolute;
+    bottom: 5px;
+    right: 3px;
+
+}
+
+
+
+
+
+
