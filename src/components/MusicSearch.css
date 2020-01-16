@@ -87,6 +87,12 @@ body {
     color: white;
 }
 
+.toptracks{
+    color: whitesmoke;
+    margin-top: 4%;
+    text-decoration: underline;
+
+}
 .trackStyling{
     width: 250px;
     height: 250px;

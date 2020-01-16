@@ -12,25 +12,25 @@ const Artist = ({artist}) => {
 
     return(
 
-    <div class="container-fluid">
-        <div class="row  justify-content-md-center">
-            <div class=" col-xs-6  col-md-6  ">
-                 <div class="card artistCardContainer">
-                    <div class="card-horizontal">
-                         <div class="img-square-wrapper">
+    <div className="container-fluid">
+        <div className="row  justify-content-md-center">
+            <div className=" col-xs-6  col-md-6  ">
+                 <div className="card artistCardContainer">
+                    <div className="card-horizontal">
+                         <div className="img-square-wrapper">
 
                                 {
                                         images[0]? 
                                             <img className="artistRes "  src={images[0].url} alt='artist profile picture' height="200" width="200"    />
                                             : 
-                                            <img className="artistRes "  src={process.env.PUBLIC_URL + '/noimage.jpg'} height="60%" width="90%" alt="img"   />
+                                            <img className="artistRes "  src={process.env.PUBLIC_URL + '/noimage.jpg'} height="200" width="200" alt="img"   />
                                     }
                                         {/* <img class="" src="http://via.placeholder.com/300x180" alt="Card image cap" /> */}
                             </div>
-                        <div class="card-body details">
-                            <h4 class="card-title ctitle"> {name}</h4>
-                            <p class="card-text ctext">{followers.total} followers</p>
-                            <p class="card-text ctext">Genres: {genres.join(', ')}</p>
+                        <div className="card-body details">
+                            <h4 className="card-title ctitle"> {name}</h4>
+                            <p className="card-text ctext">{followers.total} followers</p>
+                            <p className="card-text ctext">Genres: {genres.join(', ')}</p>
                         </div>
                 </div>
        
