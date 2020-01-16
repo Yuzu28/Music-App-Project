@@ -18,7 +18,7 @@ body{
     
 }
 
-#root .container-fluid {
+#root .wallxpaper {
     margin-top: 0%;
     min-height: 100vh;
 
@@ -35,7 +35,7 @@ body{
     color: rgb(23, 155, 23);
 }
 
-.card{
+.cardContainer{
     position: absolute;
     margin-top: 11%; 
     background-color: whitesmoke;
@@ -48,17 +48,16 @@ body{
 
 }
 
-.card-title{
+.siteTile{
     font-size: 1.8em;
 }
 
-.card-text{
+.siteInfo{
     font-size: 0.9em;
 }
 
 .container-fluid{
     margin-top: 4%;
-
 }
 .wallpaperxxx{
     position: absolute;
