@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import config from './config';
 
 
 
@@ -7,26 +8,41 @@ import axios from 'axios';
 class Videos extends Component{
 
     state ={
+        videoSearchValue: ""
 
        
     }
 
 
+       // fires the moment when the value of the element is changed when you type something in the search bar
+       updateVideosQuery = (path) =>{
+        console.log('path.target.value', path.target.value);
+
+        //update the component
+
+        // setting the state when searching an artist
+        this.setState({ videoSearchValue: path.target.value });
+    }
+
+
 
    
-    searchArtist = (e) =>{
+    searchVideos= (e) =>{
         e.preventDefault();
-        console.log('hello')
+        console.log('hello');
+
+    //     const searchVal = this.state.videoSearchValue;
+    //     console.log(searchVal)
+
 
     // const baseURL ="https://www.googleapis.com/youtube/v3/search?";
-    //     // const term = this.state.term
     //     axios.get(baseURL, {
     //         params: {
-    //             key: 'AIzaSyB-kEVuar-_YtCy2hgDHlFpIUT1_3hnV6Y',
+    //             key: `${config.api_key}`,
     //             part:'snippet',
     //             order:'relevance',
     //             maxResults:10,
-    //             q: 'fuuka' //this will change searching
+    //             q: searchVal //this will change searching  items[].videoId
     //         }
     //     })
     // .then((response) =>{
@@ -49,18 +65,32 @@ class Videos extends Component{
 
         return(
             <div className="music-container">
-                <h1 className="musicSearch"> Music Search</h1>
+                <h1 className="musicSearch"> Music Videos Search</h1>
 
-                <form  onSubmit={this.searchArtist} className="navbar-form" role="search">
+                <form  onSubmit={this.searchVideos} className="navbar-form" role="search">
                         <div className="input-group">
-                            <input type="text" className="form-control" placeholder="Search for an Artist.....(Ex: HoneyWorks)" />
+                            <input onChange={this.updateVideosQuery} type="text" className="form-control" placeholder="Search for any Music Videos.....(Ex: HoneyWorks)" />
                                 <div className="input-group-append">
-                                    <button onClick={this.searchArtist}  className="btn btn-secondary" type="button">
+                                    <button onClick={this.searchVideos}  className="btn btn-secondary" type="button">
                                         <i className="fa fa-search"></i>
                                     </button>
                                 </div>
                         </div>
                 </form>
+
+                    <div className="vvideos">
+                 {/* <div  className ="embed-responsive embed-responsive-16by9"> */}
+                        <iframe className="vids" title="musicVideos" width="350" height="250" src={`https://www.youtube.com/embed/QvFzfj-3Qvo`} frameBorder="2" allowFullScreen></iframe>
+                        <iframe className="vids" title="musicVideos" width="350" height="250" src={`https://www.youtube.com/embed/R9u_Q2radO0`} frameBorder="2" allowFullScreen></iframe>
+                        <iframe className="vids" title="musicVideos" width="350" height="250" src={`https://www.youtube.com/embed/QvFzfj-3Qvo`} frameBorder="2" allowFullScreen></iframe>
+                        <iframe className="vids" title="musicVideos" width="350" height="250" src={`https://www.youtube.com/embed/QvFzfj-3Qvo`} frameBorder="2" allowFullScreen></iframe>
+                        <iframe className="vids"  title="musicVideos" width="350" height="250" src={`https://www.youtube.com/embed/QvFzfj-3Qvo`} frameBorder="2" allowFullScreen></iframe>
+                        <iframe className="vids"  title="musicVideos" width="350" height="250" src={`https://www.youtube.com/embed/QvFzfj-3Qvo`} frameBorder="2" allowFullScreen></iframe>
+                        <iframe className="vids"  title="musicVideos" width="350" height="250" src={`https://www.youtube.com/embed/QvFzfj-3Qvo`} frameBorder="2" allowFullScreen></iframe>
+                        <iframe className="vids"  title="musicVideos" width="350" height="250" src={`https://www.youtube.com/embed/QvFzfj-3Qvo`} frameBorder="2" allowFullScreen></iframe>
+                        <iframe className="vids"  title="musicVideos" width="350" height="250" src={`https://www.youtube.com/embed/QvFzfj-3Qvo`} frameBorder="2" allowFullScreen></iframe>
+
+                    </div>
                       
                 </div>
 

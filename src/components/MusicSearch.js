@@ -261,11 +261,6 @@ import Artist from './Artist';
                 </form>
 
 
-
-
-
-              
-
                         <div>
                                 <h1 className="noResults">{this.state.msg}</h1>
                                 {this.state.img}
@@ -275,9 +270,7 @@ import Artist from './Artist';
                             
                         
                         }
-
                             {tList}
-                            {/* <Tracks tracks = {this.state.tracks} /> */}
                         </div>
                 </div>
 
@@ -292,25 +285,6 @@ import Artist from './Artist';
 
 export default MusicSearch;
 
-
-
-//not working
-// Client ID e679215f259840b1aa8ce8e8de5a5da0
-
-// var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-//         // axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-
-
-//         const api_call = {
-            
-//             url: proxyUrl + `https://api.spotify.com/v1/search?q=${musicTile}&type=track%2C%20artist;`,
-//             method: 'POST',
-//             headers = {
-//                 'Accept': 'application/json',
-//                 'Content-Type': 'application/json',
-//                 'Authorization': 'Bearer e679215f259840b1aa8ce8e8de5a5da0',
-//             }
-//         }
 
 
 
