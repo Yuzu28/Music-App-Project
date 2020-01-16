@@ -14,11 +14,11 @@ import beat from './images/beat.gif' // Tell Webpack this JS file uses this imag
 
 
             <div id="root">
-                <div className="container-fluid">
-                      <div className="card" >
+                <div className="container-fluid wallxpaper">
+                      <div className="card cardContainer" >
                         <div className="card-body">
-                            <h5 className="card-title"><u>Welcome to <span className="titless">Synchro-9</span></u></h5>
-                            <p className="card-text"> Search for your Favorite Music, Lyrics, and Videos.</p>
+                            <h5 className="card-title siteTile"><u>Welcome to <span className="titless">Synchro-9</span></u></h5>
+                            <p className="card-text siteInfo"> Search for your Favorite Music, Lyrics, and Videos.</p>
                             
                         </div>
                     </div>
