@@ -89,8 +89,14 @@ import Artist from './Artist';
 
                 if (!this.state.audio) {
                     this.setState({
+                        artistQuery: '',
+                        artist: null,
+                        tracks: [],
                         msg: "No Results Found",
                         img:  <img id= "noResultImg" src={process.env.PUBLIC_URL + '/no.jpg'} height="45%" width="50%" alt="gameImage" />,
+                        playing: false,
+                        audio: null,
+                        PlayingAudioPreview: null,
                     })
                 }
 
@@ -264,6 +270,12 @@ import Artist from './Artist';
                                 <h1 className="noResults">{this.state.msg}</h1>
                                 {this.state.img}
                             <Artist artist={this.state.artist} />
+                            {this.state.tracks.length === 0?
+                            "" : <h1 className="toptracks">Top Tracks</h1>
+                            
+                        
+                        }
+
                             {tList}
                             {/* <Tracks tracks = {this.state.tracks} /> */}
                         </div>
