@@ -16,6 +16,13 @@ body {
 
 .music-container{
     margin-top: 7%;
+    margin-bottom: 10%;
+}
+
+.videos-container{
+    margin-top: 7%;
+    margin-bottom: 10%;
+
 }
 
 .btn-secondary{
