@@ -8,7 +8,11 @@ import Artist from './Artist';
 
  class MusicSearch extends Component{
 
-    state ={
+    constructor(props) {
+        super(props);
+
+
+    this.state ={
 
         artistQuery: '',
         artist: null,
@@ -20,7 +24,7 @@ import Artist from './Artist';
         PlayingAudioPreview: null,
     }
 
-
+    }
     
 
   
