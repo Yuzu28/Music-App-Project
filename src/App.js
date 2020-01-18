@@ -6,6 +6,7 @@ import MusicSearch from './components/MusicSearch';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Vidoes from './components/Videos'
+import Comments from './components/Comments'
 
 
 
@@ -19,6 +20,8 @@ function App() {
 
         <Route  exact path="/music" component={MusicSearch}/>
         <Route  exact path="/videos" component={Vidoes}/>
+        <Route  exact path="/comments" component={Comments}/>
+
 
 
 
