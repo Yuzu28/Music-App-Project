@@ -30,7 +30,7 @@ class NavBar extends Component{
           <a className="nav-link" href="/Videos">Videos</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Comments</a>
+          <a className="nav-link" href="/Comments">Comments</a>
         </li>
       </ul>
     </div>
