@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import './pubsub';
+
 //for redux
 //Step 1 organization
 import { Provider} from 'react-redux'
