@@ -5,9 +5,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import MusicSearch from './components/MusicSearch';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import Vidoes from './components/Videos'
-import Comments from './components/Comments'
-
+import Vidoes from './components/Videos';
+import Comments from './components/Comments';
 
 
 function App() {
