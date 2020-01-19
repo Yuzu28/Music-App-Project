@@ -6,7 +6,10 @@ import { newMessage } from '../actions/messages';
 
 // import Messageboard from './Messageboard';
 
-
+// {element.id.videoId?
+//     <iframe className="vids" title="musicVideos" width="350" height="250" src={`https://www.youtube.com/embed/${element.id.videoId}`} frameBorder="2" allowFullScreen></iframe>
+//     : ""
+// }
 
 //we can use the publish msg function
 
@@ -16,6 +19,7 @@ class PublishMessage extends Component{
     updateText = (event) => this.setState({text: event.target.value});
 
     publishMessage = () => {
+        if (this.state.text ==="") return alert("Please Enter Something Valid");
         this.context.pubsub.publish(newMessage(this.state.text));
 
     }
