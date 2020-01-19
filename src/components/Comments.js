@@ -3,6 +3,7 @@ import './Comments.css';
 
 import PublishMessage from './PublishMessage';
 import Messageboard from './Messageboard';
+import SetUsername from './SetUsername';
 
 
 
@@ -16,7 +17,7 @@ class Comments extends Component{
     return (
         <div className="CommentSection">
             <h1 className="CommentTitle">Want to Leave a Comment ? </h1>
-
+            <SetUsername />
             <hr />
             <PublishMessage />
             <hr />
