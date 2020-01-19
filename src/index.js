@@ -4,7 +4,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import './pubsub';
+// import './pubsub';
+import PubSub from './pubsub';
+
 
 //for redux
 //Step 1 organization
@@ -18,6 +20,22 @@ console.log('store.getState()', store.getState());
 
 store.subscribe(() =>console.log('store.getState()', store.getState()));
 
+const pubsub = new PubSub();
+
+pubsub.addListener({
+    message: messageObject => {
+        const { message, channel } = messageObject;
+
+        console.log('Received message:', message, 'channel:', channel);
+
+        store.dispatch(message);
+    }
+})
+
+setTimeout(() => {
+    pubsub.publish({ type: 'foo', value: 'bar'});
+
+}, 1000);
 
 ReactDOM.render(
 
