@@ -7,3 +7,20 @@
     margin-top: 7%;
     margin-bottom: 10%;
 }
+
+.msgTime{
+    color: white;
+    font-size: 15px;
+
+}
+
+.msgText{
+    color: white;
+
+}
+
+.msgboard{
+    border: 1px solid red;
+    padding: 5px;
+    margin-bottom: 2%;
+}
