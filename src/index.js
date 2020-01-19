@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 
 // import './pubsub';
 import PubSub from './pubsub';
+import { newMessage } from './actions/messages';
 
 
 //for redux
@@ -33,7 +34,7 @@ pubsub.addListener({
 })
 
 setTimeout(() => {
-    pubsub.publish({ type: 'foo', value: 'bar'});
+    pubsub.publish(newMessage('Hello jjjj'));
 
 }, 1000);
 
