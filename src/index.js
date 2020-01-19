@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // import './pubsub';
-import PubSub from './pubsub';
+import PubSub, { PubSubContext } from './pubsub';
 import { newMessage } from './actions/messages';
 
 
@@ -15,7 +15,10 @@ import { Provider} from 'react-redux'
 import {createStore} from 'redux'
 import rootReducer from './reducers';
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer,
+    window.window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    
+    );
 
 console.log('store.getState()', store.getState());
 
@@ -41,7 +44,11 @@ setTimeout(() => {
 ReactDOM.render(
 
 <Provider store={store}>
-<App />
+    <PubSubContext.Provider value={{ pubsub }}>
+        <App />
+
+    </PubSubContext.Provider>
+
 </Provider>
     
     

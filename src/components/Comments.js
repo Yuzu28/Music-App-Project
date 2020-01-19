@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import './Comments.css';
 
-import PubSub from '../pubsub';
+import { PubSubContext } from '../pubsub';
 import { newMessage } from '../actions/messages';
 
+
+
 //we can use the publish msg function
-const pubsub = new PubSub();
 
 class Comments extends Component{
     state = { text: ''};
@@ -13,7 +14,7 @@ class Comments extends Component{
     updateText = (event) => this.setState({text: event.target.value});
 
     publishMessage = () => {
-        pubsub.publish(newMessage(this.state.text));
+        this.context.pubsub.publish(newMessage(this.state.text));
 
     }
 
@@ -22,6 +23,7 @@ class Comments extends Component{
     }
 
     render(){
+    console.log('this', this);
 
     return (
         <div className="CommentSection">
@@ -34,7 +36,10 @@ class Comments extends Component{
 
     )
     }
+    static contextType = PubSubContext;
 }
+
+Comments.contextType = PubSubContext;
 
 
 export default Comments;
