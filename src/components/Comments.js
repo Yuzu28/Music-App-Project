@@ -21,7 +21,7 @@ class Comments extends Component{
             <hr />
             <PublishMessage />
             <hr />
-            <Messageboard />
+            <Messageboard/>
 
 
         </div>
