@@ -1,6 +1,6 @@
 import { SET_USERNAME } from '../actions/types';
 
-const DEFAULT_USERNAME = 'anonymous';
+const DEFAULT_USERNAME = 'Anonymous';
 
 const usernameReducer = (state = DEFAULT_USERNAME, action) => {
     switch(action.type){

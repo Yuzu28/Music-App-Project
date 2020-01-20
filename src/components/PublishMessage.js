@@ -3,6 +3,7 @@ import './Comments.css';
 
 import { PubSubContext } from '../pubsub';
 import { newMessage } from '../actions/messages';
+import { connect } from 'react-redux';
 
 // import Messageboard from './Messageboard';
 
@@ -19,8 +20,11 @@ class PublishMessage extends Component{
     updateText = (event) => this.setState({text: event.target.value});
 
     publishMessage = () => {
+        const { text } = this.state;
+        const { username } = this.props;
+
         if (this.state.text ==="") return alert("Please Enter Something Valid");
-        this.context.pubsub.publish(newMessage(this.state.text));
+        this.context.pubsub.publish(newMessage( {text: this.state.text, username }));
 
     }
 
@@ -50,4 +54,9 @@ class PublishMessage extends Component{
 PublishMessage.contextType = PubSubContext;
 
 
-export default PublishMessage;
+export default connect(({username}) =>({ username }))(PublishMessage);
+
+
+
+
+

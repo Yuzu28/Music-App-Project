@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Reactions from './Reactions';
 
 const Messageboard = ({ messages }) => {
     if (!messages) return null;
@@ -10,7 +11,7 @@ const Messageboard = ({ messages }) => {
         <div>
             {
               messages.items.map(messageItem => {
-                  const { id, text, timestamp } = messageItem;
+                  const { id, text, timestamp, username } = messageItem;
 
                 if (text === ""){
                     return  console.log("hello")
@@ -24,7 +25,8 @@ const Messageboard = ({ messages }) => {
                    <div className="msgboard" key={id}>
                    <h4 className="msgTime">{new Date(timestamp).toLocaleString()}</h4>
                    <p className="msgText">{text}</p>
-                   
+                   <h4 className="msgUsername"> - {username}</h4>
+                   <Reactions />
                    </div>
                    )
                }
