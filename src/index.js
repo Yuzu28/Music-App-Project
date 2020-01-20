@@ -37,7 +37,7 @@ pubsub.addListener({
 })
 
 // setTimeout(() => {
-//     pubsub.publish(newMessage('Hello jjjj'));
+//     pubsub.publish(newMessage( {text:'Hello sos' , username:'joe'}));
 
 // }, 1000);
 
