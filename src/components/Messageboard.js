@@ -2,7 +2,27 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Reactions from './Reactions';
 
-const Messageboard = ({ messages }) => {
+const MessageReactions = ( { MessageReactions }) => {
+    if (!MessageReactions) return null;
+
+    return (
+        MessageReactions.map((reaction, index) => {
+            const { id, emoji, username } = reaction;
+
+            return (
+                <span key={id}>
+                    <em>{username}:</em>{' '}
+                     {emoji}
+                     {index !== MessageReactions.length -1 ? ', ': null}
+                
+                </span>
+            )
+        })
+    )
+
+}
+
+const Messageboard = ({ messages, reactions }) => {
     if (!messages) return null;
 
     
@@ -26,7 +46,8 @@ const Messageboard = ({ messages }) => {
                    <h4 className="msgTime">{new Date(timestamp).toLocaleString()}</h4>
                    <p className="msgText">{text}</p>
                    <h4 className="msgUsername"> - {username}</h4>
-                   <Reactions />
+                   <Reactions messageId={id}/>
+                   <MessageReactions MessageReactions={reactions[id]} />
                    </div>
                    )
                }
@@ -39,7 +60,7 @@ const Messageboard = ({ messages }) => {
 
 
 export default connect(
-    ({ messages }) => ( { messages })
+    ({ messages, reactions }) => ( { messages, reactions })
 )(Messageboard);
 
 
