@@ -1,3 +1,41 @@
+## Technology Used
+
+| Languages | 
+| ------------- |
+| HTML  | 
+| CSS| 
+| Bootstrap|
+| Javascript  | 
+| React | 
+| Rudux| 
+
+
+| API Used | 
+| ------------- |
+| Spotify API: https://developer.spotify.com/| 
+| Youtube API: https://developers.google.com/youtube/v3| 
+
+| Real Time (Used in Comment Section) | 
+| ------------- |
+| PubNub: https://www.pubnub.com/| 
+
+## Deployment
+
+| Deploying| 
+| ------------- |
+| Heroku: https://www.heroku.com/| 
+| Problems when Hosting: Failed to construct 'WebSocket'| 
+| Solution Solved: Changing react scripts 3.3.0 version to 3.2.0| 
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
