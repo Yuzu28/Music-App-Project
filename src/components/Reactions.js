@@ -21,7 +21,7 @@ class Reactions extends Component {
                         const { type, emoji} = REACTION_OBJECTS
 
                         return(
-                        <span style={{margin: 5, cursor: 'pointer'}} key={type}
+                        <span  className="emoji" style={{margin: 5, cursor: 'pointer', }} key={type}
                         onClick={this.publishReaction({type, emoji})}
                         
                         >
