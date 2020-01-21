@@ -9,9 +9,31 @@
 
 #### Artist Search-Page
 
+*  Users can head to the Artist Search-Page and Seach for their favorite Artist. For example let search for an artist/band called "Spyair" as shown below.
+
+<p align="center">
+<img src="https://github.com/Yuzu28/Music-App-Project/blob/master/public/spyair.gif"  width="80%" height="80%">
+</p>
+
+*  After the Search is completed, it will return a box of the artist with their photo, name, and genres. (If applicable). As shown below. 
+<p align="center">
+<img src="https://github.com/Yuzu28/Music-App-Project/blob/master/public/spyair.png"  width="60%" height="60%">
+</p>
+
+*  It also return the artist top track in which they are playable (the tracks just give a 30 seconds preview of the song)
+*  As the image shown below, when users try to play another track, it will automatically pause the previously played track and play the next track selected.  
+<p align="center">
+<img src="https://github.com/Yuzu28/Music-App-Project/blob/master/public/tracks.gif"  width="60%" height="60%">
+</p>
+
+
+
 #### Videos Search-Page
 
+
 #### Comments Section
+
+
 
 ## Technology Used
 
