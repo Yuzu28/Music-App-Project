@@ -92,7 +92,7 @@
 * Artist Seach Page
    * Getting the Spotify API to play music.  
    * Once I got the Sportify API to play music, it was playing all the tracks at once. 
-   *(Note to Self: Never Put the volume up so high with headphones on XD)
+   * (Note to Self: Never Put the volume up so high with headphones on XD)
    * When searching for different Artist, a track from a previous search Artist is playing in the background.
    * Trying to get One track to play and stopping the other played track. 
 * Videos Search Page
