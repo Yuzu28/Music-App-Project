@@ -70,3 +70,45 @@ body{
 }
 
 
+/* iphone 6/7/8  Portrait*/
+
+@media only screen 
+and (min-width : 375px) 
+and (max-width : 667px) 
+and (orientation : portrait) { .wallxpaper {
+    background-position:60% 40% !important;
+
+} 
+.siteTile{
+    font-size: 15px;
+}
+.siteInfo{
+    font-size: 10px;
+
+}
+.cardContainer{
+    margin-top: 20%;
+}
+}
+
+
+
+
+/* ipad  Portrait*/
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) 
+and (orientation : portrait) {.wallxpaper {
+    background-position:60% 40% !important;
+
+} 
+
+
+
+}
+
+
+.navbar-toggler{
+    background-color: white;
+}

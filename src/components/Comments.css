@@ -25,6 +25,17 @@
     margin-top: 2%;
 
 }
+.enterMe{
+    width: 25%;
+}
+.comentbutton{
+    width: 30%;
+
+}
+
+.buttoncomment{
+    border: 2px solid white;
+}
 
 .emoji{
     margin-top: 40% !important;
@@ -32,6 +43,9 @@
 }
 .setUsers{
     color: white !important;
+    font-weight: bold;
+    font-size: 1.4em;
+    
 }
 
 .new1{
@@ -47,8 +61,16 @@
     margin-bottom: 2%;
     margin-left: 5%;
     margin-right: 5%;
+    /* margin-top: 19%; */
 
 }
+.CommentTitle{
+    margin-bottom: 4%;
+}
+
+/* .CommentSection2{
+    margin-top: 4%;
+} */
 
 .msgUsername{
     color: white;
@@ -60,7 +82,7 @@
 
 }
 .sss{
-    border: 1px solid greenyellow;
+    border: 1px solid whitesmoke;
    
 
 }

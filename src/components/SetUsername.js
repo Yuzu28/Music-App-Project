@@ -6,8 +6,8 @@ import { setUsername } from '../actions/username';
 const SetUsername = ({ setUsername }) => {
     return (
         <div>
-            <h3 className="setUsers">Username</h3>
-            <input onChange={setUsername}></input>
+            <span className="setUsers">Username: </span>
+            <input className="enterMe" onChange={setUsername} placeholder="Enter a name or Stay Anonymous..."></input>
         </div>
     )
 };

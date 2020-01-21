@@ -23,7 +23,7 @@ class PublishMessage extends Component{
         const { text } = this.state;
         const { username } = this.props;
 
-        if (this.state.text ==="") return alert("Please Enter Something Valid");
+        if (this.state.text ==="") return alert("Comment Box Can not be Left Blank 😤!!!!");
         this.context.pubsub.publish(newMessage( {text: this.state.text, username }));
 
     }
@@ -38,9 +38,9 @@ class PublishMessage extends Component{
     return (
         <div className="CommentSection2">
         {/* <h1 className="CommentTitle">Want to Leave a Comment ? </h1> */}
-        <input onChange={this.updateText} onKeyPress={this.handleKeyPress} />
+        <input className="comentbutton" onChange={this.updateText} onKeyPress={this.handleKeyPress} placeholder="Leave a Comment...." />
         {' '}
-        <button onClick={this.publishMessage}>Comment</button>
+        <button className="buttoncomment" onClick={this.publishMessage}>Comment</button>
 
         {/* {Messageboard} */}
 
