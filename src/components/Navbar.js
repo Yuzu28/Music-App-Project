@@ -24,7 +24,7 @@ class NavBar extends Component{
               </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/music">Music</a>
+          <a className="nav-link" href="/music">Artist</a>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/Videos">Videos</a>

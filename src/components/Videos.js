@@ -98,7 +98,7 @@ class Videos extends Component{
 
                 <form  onSubmit={this.searchVideos} className="navbar-form" role="search">
                         <div className="input-group">
-                            <input onChange={this.updateVideosQuery} type="text" className="form-control" placeholder="Search for any Music Videos.....(Ex: HoneyWorks)" />
+                            <input onChange={this.updateVideosQuery} type="text" className="form-control" placeholder="Search for any Music Videos.....(Ex: Aimer S-ave)" />
                                 <div className="input-group-append">
                                     <button onClick={this.searchVideos}  className="btn btn-secondary" type="button">
                                         <i className="fa fa-search"></i>
