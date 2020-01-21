@@ -36,10 +36,10 @@ pubsub.addListener({
     }
 })
 
-// setTimeout(() => {
-//     pubsub.publish(newMessage( {text:'Hello sos' , username:'joe'}));
+setTimeout(() => {
+    pubsub.publish(newMessage( {text:'"Inferno" by Mrs green apple is a pretty good song XD' , username:'Yuu Haruno'}));
 
-// }, 1000);
+}, 1000);
 
 ReactDOM.render(
 

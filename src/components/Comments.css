@@ -9,22 +9,62 @@
 }
 
 .msgTime{
+    text-align: left;
     color: white;
     font-size: 15px;
+    margin-top: 2.5px;
+    margin-left: 15px;
+    font-weight: bold;
+
 
 }
 
 .msgText{
     color: white;
+    text-align: left;
+    margin-top: 2%;
 
 }
 
+.emoji{
+    margin-top: 40% !important;
+    /* text-align: right !important; */
+}
+.setUsers{
+    color: white !important;
+}
+
+.new1{
+    border-top: 1px solid white;
+
+}
+.righter{
+    text-align: left !important;
+}
 .msgboard{
-    border: 1px solid red;
-    padding: 5px;
+    border: 1px solid white;
+    /* padding: 5px; */
     margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+
 }
 
 .msgUsername{
     color: white;
+}
+
+.msgTimeContainer{
+    background-color: #4f74c8;
+    padding: 1px;
+
+}
+.sss{
+    border: 1px solid greenyellow;
+   
+
+}
+
+.Imgandcomment{
+    margin-top: 20px;
 }
