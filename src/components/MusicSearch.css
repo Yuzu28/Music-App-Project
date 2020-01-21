@@ -265,3 +265,18 @@ and (orientation : portrait) {
     box-shadow:         0px 0px 80px 0px #7300e6;
 
  }
+
+
+
+
+ /* iphone 6/7/8  Portrait*/
+
+@media only screen 
+and (min-width : 375px) 
+and (max-width : 667px) 
+and (orientation : portrait) { 
+    .music-container{
+        margin-top: 20%;
+        margin-bottom: 10%;
+    }
+}
