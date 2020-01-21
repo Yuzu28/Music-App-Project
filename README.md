@@ -1,4 +1,4 @@
-# Arc-9 Gaming
+# Synchro 9
 
 ## Description
 
