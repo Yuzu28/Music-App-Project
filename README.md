@@ -21,12 +21,14 @@
 
 ## Deployment
 
-| Deploying| 
-| ------------- |
-| Heroku: https://www.heroku.com/| 
-| Problems when Hosting: Failed to construct 'WebSocket'| 
-| Solution Solved: Changing react scripts 3.3.0 version to 3.2.0| 
-| Solution to Solving the Problem [Link](https://stackoverflow.com/questions/59359280/react-app-error-failed-to-construct-websocket-an-insecure-websocket-connecti). | 
+
+| Deploying  | Details |
+| ------------- | ------------- |
+| Heroku: | https://www.heroku.com/ |
+| Problems when Hosting:   | Failed to construct 'WebSocket'|
+| Solution Solved:  | Changing react scripts 3.3.0 version to 3.2.0 |
+| Solution to Solving the Problem  | [Link](https://stackoverflow.com/questions/59359280/react-app-error-failed-to-construct-websocket-an-insecure-websocket-connecti). |
+
 
 
 
