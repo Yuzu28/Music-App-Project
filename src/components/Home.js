@@ -18,7 +18,8 @@ import beat from './images/beat.gif' // Tell Webpack this JS file uses this imag
                       <div className="card cardContainer" >
                         <div className="card-body">
                             <h5 className="card-title siteTile"><u>Welcome to <span className="titless">Synchro-9</span></u></h5>
-                            <p className="card-text siteInfo"> Search for your Favorite Music, Lyrics, and Videos.</p>
+                            <p className="card-text siteInfo"> A Music Application</p>
+                            <p className="card-text siteInfo">  Search & Listen  for your Favorite Artist and Music Videos</p>
                             
                         </div>
                     </div>
