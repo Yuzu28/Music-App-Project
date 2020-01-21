@@ -3,7 +3,7 @@
 
 
 ## Description
-* Synchro 9 is a music application where users can search and play audio for their favorite artists or music videos. 
+* Synchro 9 is a music application where users can search and play audio for their favorite artists and their favorite music videos. 
 
 ## How does it Works?
 
