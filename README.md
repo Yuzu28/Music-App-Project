@@ -1,4 +1,4 @@
-# Synchro 9
+# Synchro-9
 <img src="https://github.com/Yuzu28/Music-App-Project/blob/master/public/homepage.gif"  width="100%" height="100%">
 
 
