@@ -1,7 +1,7 @@
 
 export default {
 
-    api_key: "AIzaSyB-kEVuar-_YtCy2hgDHlFpIUT1_3hnV6Y"
+    api_key: "AIzaSyC3PB4yJ3H43oK9HSghiwej4m7kpzxSN9w"
 
 
 }
