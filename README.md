@@ -26,7 +26,7 @@
 <img src="https://github.com/Yuzu28/Music-App-Project/blob/master/public/tracks.gif"  width="60%" height="60%">
 </p>
 
-*  If a users try to search for an unknow artist, it will take them to a now results page 😅.
+*  If a users try to search for an unknow artist, it will take them to a no results page 😅.
 
 
 
